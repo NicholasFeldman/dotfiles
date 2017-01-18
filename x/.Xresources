@@ -1,0 +1,72 @@
+! Fonts {{{
+Xft.antialias: true
+Xft.hinting:   true
+Xft.rgba:      rgb
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+Xft.dpi:       92
+! }}}
+!
+
+! Base16 Ocean
+! Scheme: Chris Kempson (http://chriskempson.com)
+
+#define base00 #2b303b
+#define base01 #343d46
+#define base02 #4f5b66
+#define base03 #65737e
+#define base04 #a7adba
+#define base05 #c0c5ce
+#define base06 #dfe1e8
+#define base07 #eff1f5
+#define base08 #bf616a
+#define base09 #d08770
+#define base0A #ebcb8b
+#define base0B #a3be8c
+#define base0C #96b5b4
+#define base0D #8fa1b3
+#define base0E #b48ead
+#define base0F #ab7967
+
+*.foreground:   base05
+*.background:   base00
+*.cursorColor:  base05
+
+*.color0:       base00
+*.color1:       base08
+*.color2:       base0B
+*.color3:       base0A
+*.color4:       base0D
+*.color5:       base0E
+*.color6:       base0C
+*.color7:       base05
+
+*.color8:       base03
+*.color9:       base09
+*.color10:      base01
+*.color11:      base02
+*.color12:      base04
+*.color13:      base06
+*.color14:      base0F
+*.color15:      base07
+
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
+rofi.color-enabled:    true
+rofi.color-window:     argb:dd343d46, argb:00000000, argb:00000000
+rofi.color-normal:     argb:00000000, base04, argb:00000000, argb:00000000, base07
+rofi.color-active:     argb:00000000, base0D, argb:00000000, argb:00000000, base0C
+rofi.color-urgent:     argb:00000000, base08, argb:00000000, argb:00000000, base09
+rofi.lines:             3
+rofi.fullscreen:        false
+rofi.font:              Roboto 35
+rofi.separator-style:   solid
+rofi.bw:                0
+rofi.eh:                1
+rofi.line-margin:       10
+rofi.hide-scrollbar:    true
+rofi.width:             100
+rofi.height:            100
+rofi.padding:           1000
+rofi.fake-transparency: true
