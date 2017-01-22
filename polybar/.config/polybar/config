@@ -37,7 +37,7 @@ font-2 = ${fonts.noto}
 inherit = bar/base
 monitor = DVI-D-0
 modules-left = i3
-modules-center = mpd
+modules-center = spotify
 modules-right = volume date
 
 [bar/left]
@@ -80,40 +80,8 @@ bar-volume-empty = ╍
 format-volume-padding = 1
 format-muted-padding = 1
 
-[module/mpd]
-type = internal/mpd
-host = 127.0.0.1
-port = 6600
-interval = 1
-format-online = <icon-prev> <icon-stop> <toggle> <icon-next>  <icon-repeat> <icon-random>  <label-song>  
-label-song = %artist% - %title%
-label-offline =  No music is playing...
-icon-play = 
-icon-pause = 
-icon-stop = 
-icon-prev = 
-icon-next = 
-icon-random = 
-icon-repeat = 
-toggle-on-foreground = #ff
-toggle-off-foreground = #55
-format-online-background = ${colors.color0}
-format-offline-background = ${colors.color0}
-format-online-padding = 1
-format-offline-padding = 1 
-[module/backlight]
-type = internal/xbacklight
-enable-scroll = false
-format = <ramp> <label>
-label = %percentage%
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-3 = 
-bar-width = 10
-bar-indicator = ╍
-bar-fill = ╍
-bar-empty = ╍
-format-background = ${colors.color0}
-format-padding = 1
-
+[module/spotify]
+type = custom/script
+exec = ~/.config/polybar/spotify.sh %artist% - %title%
+tail = true
+interval = 2
