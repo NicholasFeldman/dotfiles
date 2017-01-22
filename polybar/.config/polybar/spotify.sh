@@ -2,7 +2,7 @@
 
 main() {
   if ! pgrep -x spotify >/dev/null; then
-    echo "spotify is off"; exit
+    echo ""; exit
   fi
 
   cmd="org.freedesktop.DBus.Properties.Get"
