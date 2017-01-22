@@ -141,6 +141,8 @@ bindsym XF86AudioRaiseVolume exec "amixer -q sset Master 1%+"
 bindsym XF86AudioLowerVolume exec "amixer -q sset Master 1%-"
 bindsym XF86AudioMute exec "amixer -q sset master toggle"
 
+bindsym $mod+ctrl+l exec i3lock-fancy -t ""
+
 set_from_resource $base00 color1 #181818
 set_from_resource $base01 color2 #282828
 set_from_resource $base02 color3 #383838
