@@ -149,7 +149,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-
 set_from_resource $base00 color1 #181818
 set_from_resource $base01 color2 #282828
 set_from_resource $base02 color3 #383838
@@ -165,26 +164,6 @@ set_from_resource $base0B color12 #a1b56c
 set_from_resource $base0C color13 #86c1b9
 set_from_resource $base0D color14 #7cafc2
 set_from_resource $base0E color15 #ba8baf
-
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-  status_command i3blocks
-  position top
-  font pango: Roboto Mono for Powerline 9
-  colors {
-    background $base00
-    separator  $base00
-    statusline $base04
-
-    # State             Border  BG      Text
-    focused_workspace   $base00 $base00 $base05
-    active_workspace    $base00 $base00 $base04
-    inactive_workspace  $base00 $base00 $base03
-    urgent_workspace    $base08 $base08 $base00
-    binding_mode        $base00 $base0A $base00
-  }
-}
 
 # Window Colors
 # Property Name         Border  BG      Text    Indic.  Child Border
@@ -203,3 +182,5 @@ gaps outer 5
 
 smart_gaps    on
 smart_borders on
+
+exec_always --no-startup-id $HOME/.config/polybar/start.sh
