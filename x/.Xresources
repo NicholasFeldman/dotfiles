@@ -7,43 +7,34 @@ Xft.lcdfilter: lcddefault
 Xft.dpi:       92
 ! }}}
 !
-#define base00 #1E272B
-#define base01 #685742
-#define base02 #9D6A47
-#define base03 #B36D43
-#define base04 #78824B
-#define base05 #D99F57
-#define base06 #C9A554
-#define base07 #EAD49B
-#define base08 #666666
-#define base09 #685742
-#define base0A #9D6A47
-#define base0B #B36D43
-#define base0C #78824B
-#define base0D #D99F57
-#define base0E #C9A554
-#define base0F #EAD49B
 
-*.foreground:   base05
-*.background:   base00
-*.cursorColor:  base05
+*foreground: #ebebeb
+*background: #151515
 
-*.color0:       base00
-*.color1:       base08
-*.color2:       base0B
-*.color3:       base0A
-*.color4:       base0D
-*.color5:       base0E
-*.color6:       base0C
-*.color7:       base05
-*.color8:       base03
-*.color9:       base09
-*.color10:      base01
-*.color11:      base02
-*.color12:      base04
-*.color13:      base06
-*.color14:      base0F
-*.color15:      base07
+!black
+*color0:  #393939
+*color8:  #474747
+!red
+*color1:  #BF1E2D
+*color9:  #E7212A
+!green
+*color2:  #9DBA3A
+*color10: #A9C938
+!yellow
+*color3:  #E3982C
+*color11: #E98E00
+!blue
+*color4:  #6d9cbe
+*color12: #d0d0ff
+!magenta
+*color5:  #B7416E
+*color13: #E16A98
+!cyan
+*color6:  #435d75
+*color14: #6e98a4
+!white
+*color7:  #ebebeb
+*color15: #cccccc
 
 ! ------------------------------------------------------------------------------
 ! ROFI Color theme

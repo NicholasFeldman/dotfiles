@@ -143,30 +143,31 @@ bindsym XF86AudioMute exec "amixer -q sset master toggle"
 
 bindsym $mod+ctrl+l exec i3lock-fancy -t ""
 
-set_from_resource $base00 color1 #181818
-set_from_resource $base01 color2 #282828
-set_from_resource $base02 color3 #383838
-set_from_resource $base03 color4 #585858
-set_from_resource $base04 color5 #b8b8b8
-set_from_resource $base05 color6 #d8d8d8
-set_from_resource $base06 color7 #e8e8e8
-set_from_resource $base07 color8 #f8f8f8
-set_from_resource $base08 color9 #ab4642
-set_from_resource $base09 color10 #dc9656
-set_from_resource $base0A color11 #f7ca88
-set_from_resource $base0B color12 #a1b56c
-set_from_resource $base0C color13 #86c1b9
-set_from_resource $base0D color14 #7cafc2
-set_from_resource $base0E color15 #ba8baf
+set_from_resource $color00 color0 #181818
+set_from_resource $color01 color1 #282828
+set_from_resource $color02 color2 #383838
+set_from_resource $color03 color3 #585858
+set_from_resource $color04 color4 #b8b8b8
+set_from_resource $color05 color5 #d8d8d8
+set_from_resource $color06 color6 #e8e8e8
+set_from_resource $color07 color7 #f8f8f8
+set_from_resource $color08 color8 #ab4642
+set_from_resource $color09 color9 #dc9656
+set_from_resource $color10 color10 #f7ca88
+set_from_resource $color11 color11 #a1b56c
+set_from_resource $color12 color12 #86c1b9
+set_from_resource $color13 color13 #7cafc2
+set_from_resource $color14 color14 #ba8baf
+set_from_resource $color15 color15 #cccccc
 
 # Window Colors
-# Property Name         Border  BG      Text    Indic.  Child Border
-client.focused          $base00 $base00 $base05 $base05 $base05
-client.focused_inactive $base00 $base00 $base05 $base00 $base00
-client.unfocused        $base00 $base00 $base03 $base00 $base00
-client.urgent           $base08 $base08 $base00 $base08 $base08
-client.placeholder      $base00 $base00 $base05 $base00 $base00
-client.background       $base02
+# Property Name         Border   BG       Text     Indic.   Child Border
+client.focused          $color00 $color00 $color05 $color05 $color00
+client.focused_inactive $color00 $color00 $color05 $color00 $color08
+client.unfocused        $color00 $color00 $color03 $color00 $color00
+client.urgent           $color08 $color08 $color00 $color08 $color08
+client.placeholder      $color00 $color00 $color05 $color00 $color00
+client.background       $color02
 
 # Disable title bars
 for_window [class="^.*"] border pixel 1
@@ -178,3 +179,4 @@ smart_gaps    on
 smart_borders on
 
 exec_always --no-startup-id $HOME/.config/polybar/start.sh
+exec_always compton -b
