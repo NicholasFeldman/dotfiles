@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+export LC_ALL=C
+export LANG=C
+
+print_info() {
+  info title
+  info underline
+
+  info "OS" distro
+  info "Kernel" kernel
+  info "Shell" shell
+
+  info "DE" de
+  info "WM" wm
+  info "Terminal" term
+  info "Terminal Font" term_font
+
+  info "Model" model
+  info "CPU" cpu
+  info "GPU" gpu
+  info "Resolution" resolution
+  info "Memory" memory
+ 
+  info line_break
+  info cols
+  info line_break
+}
+
+colors=(distro)
+start=0
+end=15
