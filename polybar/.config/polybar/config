@@ -17,8 +17,8 @@ color15=#C4D7D8
 color8=#666666
 
 [fonts]
-noto = MesloLGS-Regular:size=11
-#noto = NotoSans-Regular:size=11
+#noto = MesloLGS-Regular:size=11
+scp = SourceCodePro-Regular:size=11
 
 ### Main bar ###
 
@@ -29,9 +29,7 @@ width = 100%
 underline-size = 3
 background = #ff
 foreground = ${colors.color6}
-font-0 = ${fonts.noto}
-font-1 = ${fonts.noto}
-font-2 = ${fonts.noto}
+font-0 = ${fonts.scp}
 
 [bar/main]
 inherit = bar/base
