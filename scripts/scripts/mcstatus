@@ -1,0 +1,60 @@
+#!/usr/bin/env python3
+
+import json
+import socket
+import struct
+import sys
+
+
+def popint(s):
+  acc = 0
+  shift = 0
+  b = ord(s.recv(1))
+  while b & 0x80:
+    acc |= (b & 0x7f) << shift
+    shift += 7
+    b = ord(s.recv(1))
+  return acc | (b << shift)
+
+
+def pack_varint(d):
+  return bytes(
+    [(0x40 * (i != d.bit_length() // 7)) + ((d >> (7 * i)) % 128) for i in range(1 + d.bit_length() // 7)])
+
+
+def pack_data(d):
+  return pack_varint(len(d)) + d
+
+
+def get_info(host, port):
+  sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+  sock.connect((host, int(port)))
+  sock.send(
+    pack_data(bytes(2) + pack_data(bytes(host, 'utf8')) + struct.pack('>H', port) + bytes([1])) + bytes([1, 0]))
+  popint(sock)  # Packet length
+  popint(sock)  # Packet ID
+  l, d = popint(sock), bytes()
+  while len(d) < l:
+    d += sock.recv(1024)
+  sock.close()
+  return json.loads(d.decode('utf8'))
+
+
+def main():
+  host = sys.argv[1] if len(sys.argv) > 1 else '0.0.0.0'
+  port = sys.argv[2] if len(sys.argv) > 2 else 25565
+
+  info = get_info(host, port)
+
+  address = host + ":" + str(port)
+  print(address)
+  print("-" * len(address))
+  print(info['description'])
+  print("Minecraft Version: " + info['version']['name'])
+  print("Players: " + str(info['players']['online']) + "/" + str(info['players']['max']))
+  for player in info['players']['sample']:
+    print(player['name'], end=" ")
+
+
+if __name__ == '__main__':
+  main()
