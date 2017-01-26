@@ -5,7 +5,7 @@ My dotfiles for Arch Linux
 WM: i3-gaps  
 Bar: Polybar  
 Terminal: Termite  
-Shell: Bash 
+Shell: Bash  
 Launcher: dmenu  
 Compositor: Compton
 
