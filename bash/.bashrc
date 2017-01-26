@@ -1,8 +1,13 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
-alias update='sudo pacman -Syu'
+if [ -n $(echo $OSTYPE | grep linux) ]; then
+  alias ls='ls --color=auto'
+fi
+
+if [ -f "/etc/arch-release" ]; then
+  alias update='sudo pacman -Syu'
+fi
 
 parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
