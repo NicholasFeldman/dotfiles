@@ -1,7 +1,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-if [ -n $(echo $OSTYPE | grep linux) ]; then
+if [ $(uname) == "Linux" ]; then
   alias ls='ls --color=auto'
 fi
 
