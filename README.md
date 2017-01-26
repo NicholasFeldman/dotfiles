@@ -2,11 +2,11 @@
 My dotfiles for Arch Linux
 
 # Setup
-WM: i3-gaps
-Bar: Polybar
-Terminal: Termite
-Shell: Bash
-Launcher: dmenu
+WM: i3-gaps  
+Bar: Polybar  
+Terminal: Termite  
+Shell: Bash 
+Launcher: dmenu  
 Compositor: Compton
 
 # Scripts
