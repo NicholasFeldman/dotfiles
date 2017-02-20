@@ -162,15 +162,15 @@ set_from_resource $color15 color15 #cccccc
 
 # Window Colors
 # Property Name         Border   BG       Text     Indic.   Child Border
-client.focused          $color00 $color00 $color05 $color05 $color00
-client.focused_inactive $color00 $color00 $color05 $color00 $color08
+client.focused          $color00 $color00 $color05 $color11 $color00
+client.focused_inactive $color00 $color00 $color05 $color00 $color00
 client.unfocused        $color00 $color00 $color03 $color00 $color00
-client.urgent           $color08 $color08 $color00 $color08 $color08
+client.urgent           $color00 $color08 $color00 $color08 $color00
 client.placeholder      $color00 $color00 $color05 $color00 $color00
 client.background       $color02
 
 # Disable title bars
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 2
 
 gaps inner 25
 gaps outer 5

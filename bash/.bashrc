@@ -11,6 +11,8 @@ if [ -f "/etc/arch-release" ]; then
   alias update='sudo pacman -Syu'
 fi
 
+alias git-root='cd `git rev-parse --show-toplevel`'
+
 parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
