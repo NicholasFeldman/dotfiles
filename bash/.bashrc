@@ -3,6 +3,8 @@
 
 if [ $(uname) == "Linux" ]; then
   alias ls='ls --color=auto'
+elif [ $(uname) == "Darwin" ]; then
+  alias ls='ls -G'
 fi
 
 if [ -f "/etc/arch-release" ]; then
