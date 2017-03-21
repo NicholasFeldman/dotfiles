@@ -51,6 +51,7 @@ monitor = HDMI-0
 [module/i3]
 type = internal/i3
 pin-workspaces = true
+strip-wsnumbers = true
 
 [module/date]
 type = internal/date
