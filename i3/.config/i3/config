@@ -87,7 +87,7 @@ bindsym $mod+d move workspace to output $monR
 
 set $ws1 "1:Web"
 set $ws2 "2:Comm"
-set $ws3 "3"
+set $ws3 "3:Mons"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
