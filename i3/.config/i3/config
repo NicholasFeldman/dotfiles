@@ -85,9 +85,9 @@ bindsym $mod+a move workspace to output $monL
 bindsym $mod+s move workspace to output $monC
 bindsym $mod+d move workspace to output $monR
 
-set $ws1 "1:Web"
-set $ws2 "2:Comm"
-set $ws3 "3:Mons"
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
@@ -97,16 +97,17 @@ set $ws9 "9"
 set $ws10 "10"
 
 # switch to workspace
-bindsym $mod+1 workspace $ws1
-bindsym $mod+2 workspace $ws2
-bindsym $mod+3 workspace $ws3
-bindsym $mod+4 workspace $ws4
-bindsym $mod+5 workspace $ws5
-bindsym $mod+6 workspace $ws6
-bindsym $mod+7 workspace $ws7
-bindsym $mod+8 workspace $ws8
-bindsym $mod+9 workspace $ws9
-bindsym $mod+0 workspace $ws10
+bindsym $mod+1 exec --no-startup-id ~/.config/i3/switch-workspace.py $ws1
+bindsym $mod+2 exec --no-startup-id ~/.config/i3/switch-workspace.py $ws2
+bindsym $mod+3 exec --no-startup-id ~/.config/i3/switch-workspace.py $ws3
+bindsym $mod+4 exec --no-startup-id ~/.config/i3/switch-workspace.py $ws4
+bindsym $mod+5 exec --no-startup-id ~/.config/i3/switch-workspace.py $ws5
+bindsym $mod+6 exec --no-startup-id ~/.config/i3/switch-workspace.py $ws6
+bindsym $mod+7 exec --no-startup-id ~/.config/i3/switch-workspace.py $ws7
+bindsym $mod+8 exec --no-startup-id ~/.config/i3/switch-workspace.py $ws8
+bindsym $mod+9 exec --no-startup-id ~/.config/i3/switch-workspace.py $ws9
+bindsym $mod+0 exec --no-startup-id ~/.config/i3/switch-workspace.py $ws10
+
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
