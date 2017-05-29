@@ -1,0 +1,17 @@
+[user]
+  name = Nicholas Feldman
+  email = nickcfeldman@gmail.com
+
+[color]
+  ui = auto
+
+[url "git@github.com:"]
+  insteadOf = "gh:"
+  insteadOf = "github:"
+
+[url "git@gist.github.com:"]
+  insteadOf = "gist:"
+
+[push]
+  followTags = true
+  default = current
