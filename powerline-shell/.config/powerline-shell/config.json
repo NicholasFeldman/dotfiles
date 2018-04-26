@@ -1,0 +1,13 @@
+{
+  "segments": [
+    "set_term_title",
+    "ssh",
+    "cwd", 
+    "git",
+    "jobs",
+    "root"
+  ],
+  "cwd": { 
+    "max_depth": 3
+  }
+}

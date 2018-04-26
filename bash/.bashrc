@@ -13,14 +13,11 @@ fi
 
 alias git-root='cd `git rev-parse --show-toplevel`'
 
-parse_git_branch() {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+# Requires https://github.com/b-ryan/powerline-shell
+function _update_ps1() {
+    PS1=$(powerline-shell $?)
 }
 
-ssh_disp() {
-  if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
-     echo "$USER@$HOSTNAME "
-  fi
-}
-
-PS1="$(ssh_disp)\W\[\033[32m\]\$(parse_git_branch)\[\033[00m\]: "
+if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
+    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi
