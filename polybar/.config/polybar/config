@@ -81,6 +81,6 @@ format-muted-padding = 1
 
 [module/spotify]
 type = custom/script
-exec = ~/.config/polybar/spotify.sh %artist% - %title%
+exec = ~/scripts/spotify %artist% - %title%
 tail = true
 interval = 2
