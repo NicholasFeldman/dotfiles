@@ -1,0 +1,6 @@
+[submodule "zsh/.zsh/powerlevel10k"]
+	path = zsh/.zsh/powerlevel10k
+	url = git@github.com:romkatv/powerlevel10k.git
+[submodule "zsh/.zsh/ohmyzsh"]
+	path = zsh/.zsh/ohmyzsh
+	url = git@github.com:ohmyzsh/ohmyzsh.git
