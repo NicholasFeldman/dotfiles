@@ -14,5 +14,3 @@ set ruler          " Show row and column
 set undolevels=100 " Number of undo levels
 set mouse=a        " Allow mouse input
 set backspace=indent,eol,start
-
-execute pathogen#infect()
