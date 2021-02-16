@@ -1,7 +1,3 @@
-[user]
-  name = Nicholas Feldman
-  email = nick@feldman.tech
-
 [color]
   ui = auto
 
@@ -15,3 +11,11 @@
 [push]
   followTags = true
   default = current
+
+[init]
+  defaultBranch = "master"
+
+[includeIf "gitdir:/media/development/git/"]
+  path = /media/development/git/.gitconfig
+[core]
+	autocrlf = input
